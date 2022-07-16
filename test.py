@@ -1,19 +1,14 @@
-import tdd_string_calculator_optimized as calc
+import code as calc
 import pytest
 
 def test_empty_string():
     assert calc.add('') == 0
 
-def test_get_called_Count():
-    assert calc.GetCalledCount() == 1
 
 def test_single_number_string():
     assert calc.add('34') == 34
     assert calc.add('0') == 0
-
-def test_get_called_Count():
-    assert calc.GetCalledCount() == 3
-          
+    
 def test_two_numbers_string():
     assert calc.add('61,32') == 93
     assert calc.add('21,21') == 42
@@ -51,7 +46,5 @@ def test_any_length_multiple_delimiters():
     assert calc.add('//++%%\n1++2%%3') == 6
     assert calc.add('//++%\n1++2%7\n10') == 20
 
-def test_get_called_Count():
-    assert calc.GetCalledCount() == 21
 
 
